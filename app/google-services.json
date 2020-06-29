@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "305641425972",
+    "firebase_url": "https://moneymap-e7082.firebaseio.com",
+    "project_id": "moneymap-e7082",
+    "storage_bucket": "moneymap-e7082.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305641425972:android:13e82f3c802d25b54c8e61",
+        "android_client_info": {
+          "package_name": "com.app.budgetapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305641425972-l610b21ek3rhhejf3apiet736e4o0l7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.budgetapp",
+            "certificate_hash": "26b68c252c1165fede55570733c45ee827f67e9e"
+          }
+        },
+        {
+          "client_id": "305641425972-mj6843sao6r5kc10povhvk7aon8kl158.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3JEGMHZrP1o-MBCqN455whtbEQ3JgHfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305641425972-mj6843sao6r5kc10povhvk7aon8kl158.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

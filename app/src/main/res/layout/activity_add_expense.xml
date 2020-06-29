@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.AddExpenseActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white"
+        app:title="Add Expenditure"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolBar" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/categorySpinner"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        android:text="Select Category"/>
+    <Spinner
+        android:id="@+id/categorySpinner"
+        style="@style/EditTextTheme"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:spinnerMode="dropdown"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etExpenseName"
+        style="@style/EditTextTheme"
+        app:layout_constraintTop_toBottomOf="@id/categorySpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Expense Name"
+        android:inputType="textCapWords"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etAmount"
+        style="@style/EditTextTheme"
+        app:layout_constraintTop_toBottomOf="@id/etExpenseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Expenditure"
+        android:inputType="numberDecimal"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSelectImage"
+        style="@style/ButtonTheme"
+        android:layout_width="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:text="Add Image"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/etAmount"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveExpense"
+        style="@style/ButtonTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:text="Save Expenditure"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgReceipt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSaveExpense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectImage"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

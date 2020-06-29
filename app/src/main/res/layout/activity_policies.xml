@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PoliciesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Money Saving Schemes"
+        app:titleTextColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_home"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pradhan Mantri Jan Dhan Yojna (PMJDY)- aims to make financial services such as savings and deposit accounts, remittance, credit, insurance, pension, etc easily accessible at rates affordable to the common man."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://pmjdy.gov.in/scheme"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Sukanya Samriddhi Yojna (SSY) - aims to meet the marriage and education expenses of a girl child to ensure for them a secure future."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://groww.in/p/savings-schemes/sukanya-samriddhi-yojana/"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Rajiv Gandhi Jeevandayee Arogya Yojana - any citizen of Maharashtra, holding one of the four cards issued by the government has access to free health treatment."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://www.jeevandayee.gov.in/MJPJAY/marathi/index.html"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Pradhan Mantri Jeevan Jyoti Bima Yojna (PMJJBY) -  renewable insurance scheme that offers life insurance coverage of Rs 2 lakh on death, to nominee only."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://financialservices.gov.in/insurance-divisions/Government-Sponsored-Socially-Oriented-Insurance-Schemes/Pradhan-Mantri-Jeevan-Jyoti-Bima-Yojana(PMJJBY)"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Rashtriya Swasthiya Bima Yojna (RSBY) - aims to provide health insurance to all citizens belonging to the BPL - below the poverty line."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://www.india.gov.in/spotlight/rashtriya-swasthya-bima-yojana#rsby2"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="National Social Assistance Scheme - This is a financial support, sponsored scheme pertaining to the elderly ( above 60years) citizens ensuring pensions. "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="http://nsap.nic.in/"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Pradhan Mantri Mudra Yojana -, this scheme  meets the credit needs of non corporate, non form sector, micro and small enterprises, lying below 10 lakhs. "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/link7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://www.mudra.org.in/offerings"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

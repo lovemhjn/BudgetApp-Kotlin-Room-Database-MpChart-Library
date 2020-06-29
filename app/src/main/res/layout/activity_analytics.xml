@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        tools:context=".ui.AnalyticsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Analytics"
+            app:titleTextColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toBottomOf="@id/toolBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolBar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Cumulative Expenditure Analysis"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:text="Total Budget:"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@id/pieChart"
+            app:layout_constraintBottom_toBottomOf="@id/pieChart"
+            app:layout_constraintEnd_toEndOf="@id/pieChart"
+            app:layout_constraintStart_toStartOf="@id/pieChart"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExpenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Total Expenses:"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/pieChart"
+            app:layout_constraintStart_toStartOf="@id/pieChart"
+            app:layout_constraintTop_toBottomOf="@id/tvBudget" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            android:text="Monthly/Selected Period Expenditure Analysis"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/pieChart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFrom"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="From Date"
+            app:layout_constraintEnd_toStartOf="@id/tvTo"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="To Date"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/tvFrom"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textSize="14sp"
+            android:textColor="@color/blue"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMonth"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_edittext"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:text="Select Month"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvOr" />
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartMonthly"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvMonth" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBudgetMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Total Budget:"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/pieChartMonthly"
+            app:layout_constraintStart_toStartOf="@id/pieChartMonthly"
+            app:layout_constraintBottom_toTopOf="@id/tvExpensesMonthly"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExpensesMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Total Expenses:"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/pieChartMonthly"
+            app:layout_constraintStart_toStartOf="@id/pieChartMonthly"
+            app:layout_constraintTop_toTopOf="@id/pieChartMonthly"
+            app:layout_constraintBottom_toBottomOf="@id/pieChartMonthly"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            android:text="Specific Category Expenditure Analysis"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/pieChartMonthly" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Select Category"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/categorySpinner"
+            app:layout_constraintTop_toBottomOf="@id/title3" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            style="@style/EditTextTheme"
+            android:layout_marginTop="5dp"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabel" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/monthBarChart"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/categorySpinner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
